@@ -10,13 +10,22 @@ const Footer = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('SENDING...');
-    setErrorMessage(''); // Limpiamos cualquier error previo al intentar de nuevo
+    setErrorMessage(''); // Clean up any previous error messages before a new submission
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
+    const formspreeUrl = import.meta.env.VITE_FORMSPREE_URL;
+
+    // Env validation: Check if the Formspree URL is defined
+    if (!formspreeUrl) {
+      setErrorMessage('Error: Configuration missing.');
+      setStatus('SUBMIT');
+      return;
+    }
+
     try {
-      const response = await fetch('https://formspree.io/f/xnjeyqwz', {
+      const response = await fetch(formspreeUrl, {
         method: 'POST',
         body: data,
         headers: {
