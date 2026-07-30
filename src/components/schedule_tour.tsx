@@ -4,9 +4,9 @@ import { FaCheck } from 'react-icons/fa';
 const ScheduleTour = () => {
   // Array Imágenes para el slideshow (3 images)
   const slideshowImages = [
-    '/gallery/4_baja_surf_house.webp',
-    '/gallery/13_master_br.webp',
-    '/gallery/20_mountain_view.webp',
+    './gallery/4_baja_surf_house.webp',
+    './gallery/13_master_br.webp',
+    './gallery/20_mountain_view.webp',
   ];
 
   // Slideshow State
