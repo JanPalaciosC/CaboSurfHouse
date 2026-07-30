@@ -1,10 +1,13 @@
 import { useState } from 'react';
+import PrivacyModal from './privacy_modal';
 
 const Footer = () => {
   // State to manage the status of the form submission button
   const [status, setStatus] = useState('SUBMIT');
   // State to hold any error messages from the form submission
   const [errorMessage, setErrorMessage] = useState('');
+  // State to manage the visibility of the privacy modal
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   // Form submission handler
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -171,9 +174,20 @@ const Footer = () => {
       </div>
 
       {/* Inferior Bar */}
-      <div className="w-full border-t border-white/10 bg-baja-blue py-6 text-center font-sans text-sm tracking-wide text-baja-light/70">
-        <p>BajaSurHouse Copyright 2026</p>
+      <div className="flex w-full flex-col items-center justify-between border-t border-white/10 bg-baja-blue px-6 py-6 font-sans text-sm tracking-wide text-baja-light/70 sm:flex-row sm:px-12 md:px-24">
+        <p className="mb-2 sm:mb-0">BajaSurHouse Copyright 2026</p>
+
+        {/* Privacy Policy Link */}
+        <button
+          onClick={() => setIsPrivacyOpen(true)}
+          className="hover:text-white transition-colors cursor-pointer"
+        >
+          Privacy Policy
+        </button>
       </div>
+
+      {/* Modal render */}
+      <PrivacyModal isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
     </footer>
   );
 };
