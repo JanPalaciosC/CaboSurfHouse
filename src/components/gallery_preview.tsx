@@ -7,13 +7,13 @@ const GalleryPreview = () => {
 
   // Array of photos for the gallery preview
   const photos = [
-    { id: 1, src: './gallery/24_sunrise_view.webp' },
-    { id: 2, src: './gallery/11_kitchen.webp' },
-    { id: 3, src: './gallery/23_drone_by_night.webp' },
-    { id: 4, src: './gallery/stairs.webp' },
-    { id: 5, src: './gallery/front_house_2.webp' },
-    { id: 6, src: './gallery/hill_sunset.webp' },
-    { id: 7, src: './gallery/coach_inside.webp' },
+    { id: 1, src: 'gallery/24_sunrise_view.webp' },
+    { id: 2, src: 'gallery/11_kitchen.webp' },
+    { id: 3, src: 'gallery/23_drone_by_night.webp' },
+    { id: 4, src: 'gallery/stairs.webp' },
+    { id: 5, src: 'gallery/front_house_2.webp' },
+    { id: 6, src: 'gallery/hill_sunset.webp' },
+    { id: 7, src: 'gallery/coach_inside.webp' },
   ];
 
   return (

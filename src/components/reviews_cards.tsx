@@ -8,21 +8,21 @@ const ReviewsCards = () => {
       name: 'Robyn',
       date: 'April 2026',
       text: '"Phillip was an amazing host. He couldn\'t have done anything more to make our stay more enjoyable!"',
-      img: './gallery/pool.webp',
+      img: 'gallery/pool.webp',
     },
     {
       id: 2,
       name: 'Justin',
       date: 'February 2026',
       text: '"Phillip is a genuine and caring host. Aside from the property, we really enjoyed his company."',
-      img: './gallery/night_outside.webp',
+      img: 'gallery/night_outside.webp',
     },
     {
       id: 3,
       name: 'Sean',
       date: 'April 2026',
       text: '"This house was beautiful, located in a very quiet area and well-positioned between the East Cape surf spots and the town."',
-      img: './gallery/living_room.webp',
+      img: 'gallery/living_room.webp',
     },
   ];
 
