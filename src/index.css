@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@theme {
+  /* Tus colores personalizados */
+  --color-baja-blue: #0d4f66;
+  --color-baja-sand: #ebd7bf;
+  --color-baja-earth: #c2b59b;
+  --color-baja-green: #7e9080;
+  --color-baja-dark: #2d2d2d;
+  --color-baja-light: #f7f7f5;
+
+  /* Tus tipografías */
+  --font-sans: 'Manrope', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+}
