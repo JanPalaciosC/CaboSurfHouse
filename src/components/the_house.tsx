@@ -8,6 +8,7 @@ const TheHouse = () => {
       id: 1,
       title1: '3 BEDROOMS',
       title2: '3.5 BATHROOMS',
+      title3: 'With A/C',
       icon: <FaBed size={40} />,
     },
     {
@@ -24,8 +25,8 @@ const TheHouse = () => {
     },
     {
       id: 4,
-      title1: '$4,000 USD/MONTH',
-      title2: 'RENTAL INCOME',
+      title1: '$4,000 USD/ AVG',
+      title2: 'INCOME',
       icon: <FaChartLine size={40} />,
     },
   ];
@@ -51,7 +52,7 @@ const TheHouse = () => {
 
               {/* Title */}
               <h3 className="font-sans text-sm font-semibold tracking-widest uppercase transition-transform duration-300 group-hover:scale-110">
-                {detail.title1} <br /> {detail.title2}
+                {detail.title1} <br /> {detail.title2} <br /> {detail.title3}
               </h3>
             </div>
           ))}

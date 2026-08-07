@@ -1,3 +1,4 @@
+import BackgroundMusic from './components/background_music';
 import Features from './components/features';
 import Footer from './components/footer';
 import GalleryPreview from './components/gallery_preview';
@@ -22,6 +23,7 @@ function App() {
         <ScheduleTour />
         <ReviewsHeader />
         <ReviewsCards />
+        <BackgroundMusic />
       </main>
 
       <Footer />

@@ -8,7 +8,8 @@ const Hero = () => {
     >
       {/* Background video */}
       <video
-        src="gallery/video/BajaSurfHouse.mp4"
+        src="gallery/video/video_baja_house_compress.mp4"
+        poster="gallery/video/3_baja_surf_house.webp"
         autoPlay
         loop
         muted

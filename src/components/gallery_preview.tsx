@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import GalleryModal from './gallery_modal';
+import { useState, lazy, Suspense } from 'react';
+
+const GalleryModal = lazy(() => import('./gallery_modal'));
 
 const GalleryPreview = () => {
   // Modal state to control the visibility of the gallery modal
@@ -7,9 +8,9 @@ const GalleryPreview = () => {
 
   // Array of photos for the gallery preview
   const photos = [
-    { id: 1, src: 'gallery/24_sunrise_view.webp' },
-    { id: 2, src: 'gallery/11_kitchen.webp' },
-    { id: 3, src: 'gallery/23_drone_by_night.webp' },
+    { id: 1, src: 'gallery/24_baja_surf_house.webp' },
+    { id: 2, src: 'gallery/11_baja_surf_house.webp' },
+    { id: 3, src: 'gallery/23_baja_surf_house.webp' },
     { id: 4, src: 'gallery/stairs.webp' },
     { id: 5, src: 'gallery/front_house_2.webp' },
     { id: 6, src: 'gallery/hill_sunset.webp' },
@@ -45,7 +46,6 @@ const GalleryPreview = () => {
           );
         })}
       </div>
-
       {/* Noise Overlay for all photos at once */}
       <div className="pointer-events-none absolute inset-0 z-10 opacity-[0.15] mix-blend-overlay">
         <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
@@ -60,10 +60,8 @@ const GalleryPreview = () => {
           <rect width="100%" height="100%" filter="url(#noiseFilterGallery)" />
         </svg>
       </div>
-
       {/* General Gradient Overlay */}
       <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-baja-dark/90 via-baja-dark/20 to-baja-dark/90"></div>
-
       {/* Main Button */}
       <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center px-4">
         <button
@@ -73,9 +71,10 @@ const GalleryPreview = () => {
           WATCH MORE IN OUR GALLERY
         </button>
       </div>
-
       {/* Gallery Modal Component */}
-      <GalleryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Suspense fallback={null}>
+        {isModalOpen && <GalleryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
+      </Suspense>{' '}
     </section>
   );
 };
