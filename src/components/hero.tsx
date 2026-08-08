@@ -58,7 +58,9 @@ const Hero = () => {
         {/* Buttons container */}
         <div className="flex flex-col space-y-4 font-sans sm:flex-row sm:space-x-4 sm:space-y-0">
           <a
-            href="#the-house"
+            href="/buyers-guide.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-baja-blue px-8 py-3 text-center text-sm font-semibold tracking-widest text-white uppercase transition-all duration-300 hover:scale-105 hover:bg-baja-green"
           >
             View The House
