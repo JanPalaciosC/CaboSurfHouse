@@ -94,7 +94,7 @@ const GalleryModal = ({ isOpen, onClose }: GalleryModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-black/95 text-white backdrop-blur-md">
+    <div className="fixed inset-0 z-100 flex flex-col bg-black/95 text-white backdrop-blur-md">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4 sm:px-8 sm:py-6 border-b border-white/15">
         <div className="flex space-x-4 sm:space-x-6">

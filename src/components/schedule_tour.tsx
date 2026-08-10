@@ -63,7 +63,7 @@ const ScheduleTour = () => {
             rel="noopener noreferrer"
             className="border border-baja-dark bg-transparent px-8 py-3 text-center text-sm font-semibold tracking-widest text-baja-dark uppercase transition-all duration-300 hover:scale-105 hover:bg-baja-dark hover:text-baja-light"
           >
-            BUYER GUIDE
+            DOWNLOAD BUYER GUIDE
           </a>
         </div>
       </div>

@@ -155,7 +155,7 @@ const Footer = () => {
           </form>
         </div>
 
-        {/* --- LADO DERECHO: Imagen de Mapa + Enlace --- */}
+        {/* --- Right Side: Map + Link --- */}
         <div id="location" className="flex flex-1 flex-col items-center justify-between">
           <div className="w-full">
             <h2 className="mb-8 text-center font-serif text-2xl font-semibold tracking-widest text-baja-light uppercase">
@@ -167,12 +167,12 @@ const Footer = () => {
               <img
                 src="./gallery/baja_house_map.png"
                 alt="Baja Surf House Location Map"
-                className="h-full max-h-[380px] w-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
 
-          {/* Enlace directo a Google Maps */}
+          {/* Link google maps */}
           <a
             href="https://maps.app.goo.gl/8SKW12tnmTdE8eSS7?g_st=iw"
             target="_blank"

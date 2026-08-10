@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaMusic, FaPause } from 'react-icons/fa';
 
-// Le decimos a TypeScript que window.YT existe para que no marque error
 declare global {
   interface Window {
     YT: any;
@@ -70,7 +69,7 @@ const BackgroundMusic = () => {
       {/* Floating Button */}
       <button
         onClick={togglePlay}
-        className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full shadow-2xl transition-all duration-300 hover:scale-110 sm:bottom-8 sm:right-8 ${
+        className={`fixed bottom-6 right-6 z-40 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full shadow-2xl transition-all duration-300 hover:scale-110 sm:bottom-8 sm:right-8 ${
           isPlaying
             ? 'bg-baja-green text-white'
             : 'border-2 border-baja-blue bg-white text-baja-blue'

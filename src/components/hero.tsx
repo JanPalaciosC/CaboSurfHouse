@@ -2,8 +2,6 @@ const Hero = () => {
   return (
     <section
       id="home"
-      // CAMBIO 1: Usamos h-[100dvh] para que abarque toda la pantalla del celular
-      // de forma dinámica, ignorando la barra de direcciones del navegador web.
       className="relative h-[100dvh] min-h-[600px] w-full bg-gray-900 overflow-hidden"
     >
       {/* Background video */}
@@ -42,8 +40,6 @@ const Hero = () => {
           LIVE THE EAST CAPE LIFESTYLE
         </h1>
 
-        {/* --- CAMBIOS DEL CLIENTE AQUÍ --- */}
-        {/* Se aumentó el tamaño a text-lg en móvil, sm:text-xl y md:text-2xl para que sea más visible */}
         <p className="mb-2 font-sans font-medium text-lg text-white sm:text-xl md:text-2xl">
           Surf. Fish. Relax. Golf.
         </p>
