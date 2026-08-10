@@ -54,9 +54,9 @@ const BackgroundMusic = () => {
     if (!isReady || !playerRef.current) return;
 
     if (isPlaying) {
-      playerRef.current.pauseVideo();
+      (playerRef.current as any).pauseVideo();
     } else {
-      playerRef.current.playVideo();
+      (playerRef.current as any).playVideo();
     }
   };
 

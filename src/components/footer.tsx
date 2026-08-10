@@ -155,21 +155,32 @@ const Footer = () => {
           </form>
         </div>
 
-        {/* Location container */}
-        <div id="location" className="flex flex-1 flex-col items-center">
-          <h2 className="mb-8 text-center font-serif text-2xl font-semibold tracking-widest text-baja-light uppercase">
-            LOCATION
-          </h2>
-          <div className="h-full min-h-[300px] sm:min-h-[400px] w-full overflow-hidden border border-white/20 bg-baja-light shadow-lg">
-            <iframe
-              title="Baja Surf House Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14681.45155303303!2d-109.58580294970301!3d23.08380805297595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86af581b550de16d%3A0x457174cea20b4e87!2sPlaya%20Los%20Zacatitos!5e0!3m2!1ses!2smx!4v1785271736501!5m2!1ses!2smx"
-              className="h-full w-full border-0"
-              allowFullScreen={true}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+        {/* --- LADO DERECHO: Imagen de Mapa + Enlace --- */}
+        <div id="location" className="flex flex-1 flex-col items-center justify-between">
+          <div className="w-full">
+            <h2 className="mb-8 text-center font-serif text-2xl font-semibold tracking-widest text-baja-light uppercase">
+              LOCATION
+            </h2>
+
+            {/* Map of zacatitos*/}
+            <div className="w-full overflow-hidden border border-white/20 bg-baja-light shadow-lg">
+              <img
+                src="./gallery/baja_house_map.png"
+                alt="Baja Surf House Location Map"
+                className="h-full max-h-[380px] w-full object-cover"
+              />
+            </div>
           </div>
+
+          {/* Enlace directo a Google Maps */}
+          <a
+            href="https://maps.app.goo.gl/8SKW12tnmTdE8eSS7?g_st=iw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 font-sans text-sm font-medium tracking-wide text-baja-light underline transition-colors hover:text-baja-green"
+          >
+            Baja Surf House in Google Maps
+          </a>
         </div>
       </div>
 

@@ -12,8 +12,9 @@ const Navbar = () => {
   // List of navigation links
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'The House', href: '#the-house' },
     { name: 'Gallery', href: '#gallery' },
+
+    { name: 'The House', href: '#the-house' },
     { name: 'Airbnb', href: '#airbnb' },
     { name: 'Location', href: '#location' },
     { name: 'Contact', href: '#contact' },
